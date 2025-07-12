@@ -9,7 +9,7 @@ body {
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#29251c, #2c2306);
+  background: linear-gradient(#1d1d1d, #545454);
   color: #d9e2f1;
   min-height: 100vh;
 }
@@ -28,11 +28,11 @@ body {
 }
 
 #main-header #title img {
-  width: 4rem;
-  height: 4rem;
+  width: 7rem;
+  height: 7rem;
   object-fit: contain;
   border-radius: 50%;
-  border: 2px solid #ffc404;
+  /* border: 2px solid #ffc404; */
 }
 
 #main-header button {
@@ -62,7 +62,7 @@ h1 {
 }
 
 .meal-item {
-  background-color: #1d1a16;
+  background-color: #1b1b1b;
   border-radius: 1rem;
   overflow: hidden;
   text-align: center;
@@ -94,7 +94,7 @@ h1 {
 
 .meal-item-price {
   display: inline-block;
-  background-color: #312c1d;
+  background-color: #4d4d4d55;
   color: #ffc404;
   font-size: 0.9rem;
   font-weight: bold;
