@@ -1,8 +1,11 @@
 import { FormatPrice } from "../util/format-price.util";
+import Button from "./ui/Button";
 
 const formatPrice = new FormatPrice();
 
 export default function MealItem({ meal }) {
+  function handleAddToCart() {}
+
   return (
     <li key={meal?.id} className="meal-item">
       <article>
@@ -14,7 +17,7 @@ export default function MealItem({ meal }) {
           <p className="meal-item-description">{meal.description}</p>
         </div>
         <p className="meal-item-actions">
-          <button>Add to cart</button>
+          <Button onClick={handleAddToCart}>Add to cart</Button>
         </p>
       </article>
     </li>
