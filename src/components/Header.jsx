@@ -1,7 +1,18 @@
+import { useContext } from "react";
 import logoImage from "../assets/pizza-logo.svg";
 import Button from "./ui/Button";
+import CartContext from "../store/CartContext";
 
 export default function Header() {
+  const cartContext = useContext(CartContext);
+
+  const totalItemsQuantity = cartContext.items.reduce(
+    (totalNumberOfItems, item) => {
+      return totalNumberOfItems + item.quantity;
+    },
+    0
+  );
+
   function handleClickOnCart() {}
 
   return (
@@ -12,7 +23,7 @@ export default function Header() {
       </div>
       <nav>
         <Button textOnly={true} onClick={handleClickOnCart}>
-          Cart (0)
+          Cart ({totalItemsQuantity})
         </Button>
       </nav>
     </header>

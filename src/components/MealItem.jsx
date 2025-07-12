@@ -1,10 +1,16 @@
+import { useContext } from "react";
 import { FormatPrice } from "../util/format-price.util";
 import Button from "./ui/Button";
+import CartContext from "../store/CartContext";
 
 const formatPrice = new FormatPrice();
 
 export default function MealItem({ meal }) {
-  function handleAddToCart() {}
+  const cartContext = useContext(CartContext);
+
+  function handleAddToCart() {
+    cartContext.addItem(meal);
+  }
 
   return (
     <li key={meal?.id} className="meal-item">
