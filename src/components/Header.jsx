@@ -1,10 +1,13 @@
 import { useContext } from "react";
+
 import logoImage from "../assets/pizza-logo.svg";
 import Button from "./ui/Button";
 import CartContext from "../store/CartContext";
+import UserProgressContext from "../store/UserProgressContext";
 
 export default function Header() {
   const cartContext = useContext(CartContext);
+  const userProgressContext = useContext(UserProgressContext);
 
   const totalItemsQuantity = cartContext.items.reduce(
     (totalNumberOfItems, item) => {
@@ -13,7 +16,9 @@ export default function Header() {
     0
   );
 
-  function handleClickOnCart() {}
+  function handleShowCart() {
+    userProgressContext.showCart();
+  }
 
   return (
     <header id="main-header">
@@ -22,7 +27,7 @@ export default function Header() {
         <h1>Pizza & More</h1>
       </div>
       <nav>
-        <Button textOnly={true} onClick={handleClickOnCart}>
+        <Button textOnly={true} onClick={handleShowCart}>
           Cart ({totalItemsQuantity})
         </Button>
       </nav>
