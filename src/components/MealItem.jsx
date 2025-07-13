@@ -1,12 +1,13 @@
 import { useContext } from "react";
-import { FormatPrice } from "../util/format-price.util";
+
 import Button from "./ui/Button";
 import CartContext from "../store/CartContext";
-
-const formatPrice = new FormatPrice();
+import { PriceService } from "../util/price-service.util";
 
 export default function MealItem({ meal }) {
   const cartContext = useContext(CartContext);
+
+  const priceService = new PriceService();
 
   function handleAddToCart() {
     cartContext.addItem(meal);
@@ -19,7 +20,7 @@ export default function MealItem({ meal }) {
         <img src={`http://localhost:5050/${meal.image}`} alt={meal.name} />
         <div className="">
           <h3>{meal.name}</h3>
-          <p className="meal-item-price">{formatPrice.format(meal.price)}</p>
+          <p className="meal-item-price">{priceService.format(meal.price)}</p>
           <p className="meal-item-description">{meal.description}</p>
         </div>
         <p className="meal-item-actions">
