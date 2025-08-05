@@ -1,5 +1,5 @@
-import MealItem from "./MealItem";
-import ErrorModal from "./ui/ErrorModal";
+import MealItem from "../components/MealItem";
+import ErrorModal from "../components/ui/ErrorModal";
 import { useMeals } from "../hooks/useMeals";
 
 export default function Meals() {
