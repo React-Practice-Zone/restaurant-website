@@ -1,0 +1,44 @@
+:root {
+  --primary-bg: #fff;
+  --secondary-bg: #f8f9fa;
+  --primary-text: #222;
+  --accent: #ff7043;
+  --header-height: 64px;
+}
+
+.rootLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--secondary-bg);
+  color: var(--primary-text);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.header {
+  height: var(--header-height);
+  background: var(--primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  z-index: 10;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer {
+  background: var(--primary-bg);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  color: #888;
+  border-top: 1px solid #eee;
+}
