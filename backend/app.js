@@ -20,6 +20,24 @@ app.get("/meals", async (req, res) => {
   res.json(JSON.parse(meals));
 });
 
+app.get("/meals/:mealId", async (req, res) => {
+  const { mealId } = req.params;
+
+  try {
+    const meals = await fs.readFile("./data/available-meals.json", "utf8");
+    const allMeals = JSON.parse(meals);
+    const meal = allMeals.find((m) => m.id === mealId);
+
+    if (!meal) {
+      return res.status(404).json({ message: "Meal not found" });
+    }
+
+    res.json(meal);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching meal details" });
+  }
+});
+
 app.post("/orders", async (req, res) => {
   const orderData = req.body.order;
 
