@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import logoImage from "../assets/pizza-logo.svg";
 import Button from "./ui/Button";
@@ -27,6 +28,8 @@ export default function Header() {
         <h1>Pizza & More</h1>
       </div>
       <nav>
+        <Link to="/">Home</Link>
+        <Link to="/meals">Meals</Link>
         <Button textOnly={true} onClick={handleShowCart}>
           Cart ({totalItemsQuantity})
         </Button>
