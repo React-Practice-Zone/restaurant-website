@@ -1,4 +1,4 @@
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Meals from "./pages/Meals";
 import RootLayout from "./pages/Root/Root";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
