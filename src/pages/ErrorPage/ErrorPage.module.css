@@ -1,0 +1,106 @@
+.errorPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(#1d1d1d, #545454);
+}
+
+.errorContainer {
+  background-color: #e4ddd4;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  max-width: 500px;
+  width: 100%;
+  animation: fade-slide-up 0.3s ease-out forwards;
+}
+
+.errorIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.errorTitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 1.5rem 0;
+  color: #ffc404;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.errorContent {
+  color: #46443c;
+  margin-bottom: 2rem;
+}
+
+.errorContent p {
+  margin: 0.5rem 0;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.errorContent p:first-child {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.backButton {
+  font: inherit;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  background-color: #ffc404;
+  border: 1px solid #ffc404;
+  color: #1f1a09;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover,
+.backButton:active {
+  background-color: #ffab04;
+  border-color: #ffab04;
+  color: #1f1a09;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .errorPage {
+    padding: 1rem;
+  }
+
+  .errorContainer {
+    padding: 2rem 1.5rem;
+  }
+
+  .errorTitle {
+    font-size: 1.5rem;
+  }
+
+  .errorIcon {
+    font-size: 3rem;
+  }
+}
