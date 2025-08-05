@@ -130,6 +130,25 @@ h1 {
   margin: 0.75rem 0;
 }
 
+.meal-item h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.meal-item h3 a:hover {
+  color: #ffc404;
+}
+
+.meal-item img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.meal-item img:hover {
+  transform: scale(1.05);
+}
+
 .meal-item-description {
   margin: 1rem;
 }
@@ -147,6 +166,32 @@ h1 {
 
 .meal-item-actions {
   margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.meal-item-actions a {
+  text-decoration: none;
+}
+
+.meal-item-actions .button {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+}
+
+.meal-item-actions .button:nth-child(2),
+.meal-item-actions a .button {
+  background-color: transparent;
+  border: 1px solid #ffc404;
+  color: #ffc404;
+}
+
+.meal-item-actions .button:nth-child(2):hover,
+.meal-item-actions a .button:hover {
+  background-color: #ffc404;
+  color: #1f1a09;
 }
 
 .cart h2 {
