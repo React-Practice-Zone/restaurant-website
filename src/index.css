@@ -19,6 +19,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 10%;
+  position: relative;
 }
 
 #main-header #title {
@@ -33,6 +34,47 @@ body {
   object-fit: contain;
   border-radius: 50%;
   /* border: 2px solid #ffc404; */
+}
+
+#main-header nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#main-header nav a {
+  text-decoration: none;
+  color: #d9e2f1;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+#main-header nav a:hover {
+  color: #ffc404;
+}
+
+#main-header nav a.active {
+  color: #ffc404;
+}
+
+#main-header nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ffc404;
+  border-radius: 2px;
+}
+
+#main-header .cart-button {
+  margin-left: auto;
 }
 
 #main-header button {
