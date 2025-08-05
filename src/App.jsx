@@ -1,17 +1,16 @@
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
-import Header from "./components/Header";
-import Meals from "./pages/Meals";
 import Home from "./pages/Home";
+import Meals from "./pages/Meals";
+import RootLayout from "./pages/Root/Root";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import { CartContextProvider } from "./store/CartContext";
 import { UserProgressContextProvider } from "./store/UserProgressContext";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./pages/Root/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/meals", element: <Meals /> },
