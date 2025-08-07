@@ -1,5 +1,6 @@
 import Home from "./pages/Home/Home";
 import Meals from "./pages/Meals/Meals";
+import OrderOnline from "./pages/OrderOnline/OrderOnline";
 import RootLayout from "./pages/Root/Root";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import MealDetails from "./pages/MealDetails/MealDetails";
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/meals", element: <Meals /> },
+      { path: "/order-online", element: <OrderOnline /> },
       { path: "/meals/:mealId", element: <MealDetails /> },
     ],
   },
