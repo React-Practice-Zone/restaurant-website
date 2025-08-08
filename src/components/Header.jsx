@@ -30,6 +30,7 @@ export default function Header() {
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/meals">Meals</NavLink>
+        <NavLink to="/order-online">Order Online</NavLink>
       </nav>
       <Button textOnly={true} onClick={handleShowCart} className="cart-button">
         Cart ({totalItemsQuantity})
